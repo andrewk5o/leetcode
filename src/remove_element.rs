@@ -11,7 +11,7 @@ impl Solution {
         let mut i = 0;
         for j in 0..nums.len() {
             if nums[j] != val {
-                nums[j] = nums[j];
+                nums[i] = nums[j];
                 i += 1;
             }
         }
