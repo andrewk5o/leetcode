@@ -1,4 +1,4 @@
-// 28. Remove duplicates from sorted array
+// 26. Remove duplicates from sorted array
 pub struct Solution;
 
 impl Solution {
