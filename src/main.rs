@@ -1,5 +1,6 @@
 mod merge_sorted_array;
 mod remove_duplicates_from_sorted_array;
+mod remove_duplicates_from_sorted_array_ii;
 mod remove_element;
 
 fn main() {
@@ -12,5 +13,8 @@ fn main() {
     remove_element::Solution::remove_element(&mut vec![3, 2, 2, 3], 3);
     remove_duplicates_from_sorted_array::Solution::remove_duplicates(
         &mut vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4],
+    );
+    remove_duplicates_from_sorted_array_ii::Solution::remove_duplicates(
+        &mut vec![0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4],
     );
 }
