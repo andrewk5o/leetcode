@@ -1,15 +1,11 @@
 // 27. Remove element
-pub struct Solution;
-
-impl Solution {
-    pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
-        let mut i = 0;
-        for j in 0..nums.len() {
-            if nums[j] != val {
-                nums[i] = nums[j];
-                i += 1;
-            }
+pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
+    let mut k = 0;
+    for i in 0..nums.len() {
+        if nums[i] != val {
+            nums[k] = nums[i];
+            k += 1;
         }
-        i32::try_from(i).unwrap()
     }
+    i32::try_from(k).unwrap()
 }
