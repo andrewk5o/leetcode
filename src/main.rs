@@ -42,9 +42,7 @@ fn main() {
     Solution::merge(&mut vec![1, 2, 3, 0, 0, 0], 3, &mut vec![2, 5, 6], 3);
     Solution::remove_element(&mut vec![3, 2, 2, 3], 3);
     Solution::remove_duplicates(&mut vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
-    Solution::remove_duplicates_ii(&mut vec![
-        0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4,
-    ]);
+    Solution::remove_duplicates_ii(&mut vec![0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 4]);
     Solution::majority_element(vec![2, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 3, 4]);
     Solution::rotate_array(&mut vec![1, 2, 3, 4, 5, 6, 7, 8], 3);
     Solution::max_profit(vec![7, 1, 5, 3, 6, 4]);
