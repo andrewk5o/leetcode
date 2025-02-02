@@ -1,27 +1,7 @@
-mod merge_sorted_array;
-mod remove_element;
-mod remove_duplicates_from_sorted_array {
-    pub mod i;
-    pub mod ii;
-}
-mod majority_element;
-mod rotate_array;
-mod best_time_to_buy_and_sell_stock {
-    pub mod i;
-    pub mod ii;
-}
-mod jump_game {
-    pub mod i;
-    pub mod ii;
-}
+pub mod solutions;
+pub use solutions::*;
 
-fn main() {
-    merge_sorted_array::merge(
-        &mut vec![1, 2, 3, 0, 0, 0],
-        3,
-        &mut vec![2, 5, 6],
-        3,
-    );
+pub fn leetcode() {
     remove_element::remove_element(&mut vec![3, 2, 2, 3], 3);
     remove_duplicates_from_sorted_array::i::remove_duplicates(&mut vec![
         0, 0, 1, 1, 1, 2, 2, 3, 3, 4,
@@ -39,4 +19,5 @@ fn main() {
     ]);
     jump_game::i::can_jump(vec![2, 3, 1, 1, 4]);
     jump_game::ii::jump(vec![2, 3, 1, 1, 4]);
+    h_index::h_index(vec![3, 0, 6, 1, 5]);
 }

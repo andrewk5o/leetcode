@@ -1,7 +1,9 @@
 // 88. Merge Sorted Array
 
 pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
-    let (mut m, mut n, mut k) = (m - 1, n - 1, m + n - 1);
+    let mut m = m - 1;
+    let mut n = n - 1;
+    let mut k = m + n + 1;
 
     while m >= 0 && n >= 0 {
         if nums1[m as usize] > nums2[n as usize] {
