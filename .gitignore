@@ -21,3 +21,5 @@ leetcode_exs-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+target/
