@@ -23,3 +23,5 @@ leetcode_exs-*.tar
 /tmp/
 
 target/
+
+.elixir_ls/
