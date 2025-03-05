@@ -18,3 +18,18 @@ pub fn h_index(citations: Vec<i32>) -> i32 {
 
     h_index as i32
 }
+
+#[cfg(test)]
+mod tests {
+    use super::h_index;
+
+    #[test]
+    fn test_example() {
+        assert_eq!(h_index(vec![3, 0, 6, 1, 5]), 3);
+    }
+
+    #[test]
+    fn test_empty() {
+        assert_eq!(h_index(vec![]), 0);
+    }
+}

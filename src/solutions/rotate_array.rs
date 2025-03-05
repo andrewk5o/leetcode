@@ -1,10 +1,9 @@
 // 189. Rotate array
+// https://leetcode.com/problems/rotate-array/
 
-use std::collections::{HashMap, HashSet};
-
-fn swap(nums: &mut Vec<i32>, l: i32, r: i32) {
+pub fn swap(nums: &mut Vec<i32>, l: i32, r: i32) {
     let (l, r) = (l as usize, r as usize);
-    (nums[l], nums[r]) = (nums[l], nums[r]);
+    (nums[l], nums[r]) = (nums[r], nums[l]);
 }
 
 pub fn rotate(nums: &mut Vec<i32>, k: i32) {
@@ -35,83 +34,14 @@ pub fn rotate(nums: &mut Vec<i32>, k: i32) {
     }
 }
 
-pub fn str_str(haystack: String, needle: String) -> i32 {
-    let haystack = haystack.as_bytes();
-    let needle = needle.as_bytes();
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    if needle.len() > haystack.len() {
-        return -1 as i32;
+    #[test]
+    fn test_rotate() {
+        let mut nums = vec![1, 2, 3, 4, 5, 6, 7];
+        rotate(&mut nums, 3);
+        assert_eq!(nums, vec![5, 6, 7, 1, 2, 3, 4]);
     }
-
-    for i in 0..=(haystack.len() - needle.len()) {
-        if haystack[i..i + needle.len()] == *needle {
-            return i as i32;
-        }
-    }
-    -1
-}
-
-pub fn length_of_longest_substring(s: String) -> i32 {
-    let s = &s.as_bytes();
-
-    let mut sub_str = HashSet::<u8>::with_capacity(s.len());
-    let (mut l, mut r, mut max) = (0, 0, 0);
-
-    while r < s.len() {
-        if sub_str.contains(&s[r]) {
-            sub_str.remove(&s[l]);
-            l += 1;
-        } else {
-            sub_str.insert(s[r]);
-            r += 1;
-            max = max.max(r - l);
-        }
-    }
-
-    max as i32
-}
-
-pub fn my_pow(x: f64, n: i32) -> f64 {
-    fn pow(x: f64, n: i32) -> f64 {
-        if x == 0.0 {
-            return 0.0;
-        }
-        if n == 0 {
-            return 1.0;
-        }
-
-        let res = pow(x * x, n / 2);
-
-        return res * if n % 2 == 0 { 1.0 } else { x };
-    }
-
-    let res = pow(x, n.abs());
-
-    return if n > 0 { res } else { 1.0 / res };
-}
-
-pub fn roman_to_int(s: String) -> i32 {
-    let s = s.as_bytes();
-
-    let roman = HashMap::<u8, i32>::from([
-        (b'I', 1),
-        (b'V', 5),
-        (b'X', 10),
-        (b'L', 50),
-        (b'C', 100),
-        (b'D', 500),
-        (b'M', 1000),
-    ]);
-
-    let mut res = 0;
-
-    for i in (0..s.len()).rev() {
-        if roman[&s[i]] < roman[&s[i + 1]] {
-            res -= roman[&s[i]];
-        } else {
-            res += roman[&s[i]];
-        }
-    }
-
-    res
 }

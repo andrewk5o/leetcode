@@ -8,7 +8,7 @@ pub fn is_subsequence(s: String, t: String) -> bool {
 
     for c in t_bytes {
         if k == s.len() {
-            return true;
+            break;
         }
 
         if *c == s_bytes[k] {
@@ -16,5 +16,26 @@ pub fn is_subsequence(s: String, t: String) -> bool {
         }
     }
 
-    false
+    k == s.len()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::is_subsequence;
+
+    #[test]
+    fn test_is_subsequence_true() {
+        assert_eq!(
+            is_subsequence("abc".to_string(), "ahbgdc".to_string()),
+            true
+        );
+    }
+
+    #[test]
+    fn test_is_subsequence_false() {
+        assert_eq!(
+            is_subsequence("axc".to_string(), "ahbgdc".to_string()),
+            false
+        );
+    }
 }

@@ -1,4 +1,5 @@
 // 26. Remove duplicates from sorted array
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
     let mut k: usize = 1;
@@ -24,5 +25,19 @@ mod tests {
         let mut nums = vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
         assert_eq!(remove_duplicates(&mut nums), 5);
         assert_eq!(&nums[..5], &[0, 1, 2, 3, 4]);
+    }
+
+    #[test]
+    fn test_single_element() {
+        let mut nums = vec![1];
+        assert_eq!(remove_duplicates(&mut nums), 1);
+        assert_eq!(&nums[..1], &[1]);
+    }
+
+    #[test]
+    fn test_no_duplicates() {
+        let mut nums = vec![1, 2, 3, 4];
+        assert_eq!(remove_duplicates(&mut nums), 4);
+        assert_eq!(&nums[..4], &[1, 2, 3, 4]);
     }
 }

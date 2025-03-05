@@ -1,4 +1,5 @@
 // 45. Jump Game II
+// https://leetcode.com/problems/jump-game-ii/
 
 pub fn jump(nums: Vec<i32>) -> i32 {
     let mut jumps = 0;
@@ -23,5 +24,11 @@ mod tests {
     fn test_jump() {
         assert_eq!(jump(vec![2, 3, 1, 1, 4]), 2);
         assert_eq!(jump(vec![2, 3, 0, 1, 4]), 2);
+    }
+    
+    #[test]
+    fn test_single_element() {
+        // One element means no jump is needed.
+        assert_eq!(jump(vec![0]), 0);
     }
 }

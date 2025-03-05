@@ -21,4 +21,10 @@ mod tests {
         assert_eq!(max_profit(vec![1, 2, 3, 4, 5]), 4);
         assert_eq!(max_profit(vec![7, 6, 4, 3, 1]), 0);
     }
+    
+    #[test]
+    fn test_single_day() {
+        // With one day, no profit can be made.
+        assert_eq!(max_profit(vec![5]), 0);
+    }
 }

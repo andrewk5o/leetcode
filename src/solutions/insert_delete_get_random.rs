@@ -43,3 +43,16 @@ impl RandomizedSet {
         self.vec[random_range(0..self.vec.len())]
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_randomized_set() {
+        let mut set = RandomizedSet::new();
+        assert!(set.insert(1));
+        assert!(!set.insert(1));
+        assert!(set.remove(1));
+        assert!(!set.remove(1));
+    }
+}

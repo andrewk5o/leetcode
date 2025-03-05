@@ -1,5 +1,5 @@
-// 26. Remove duplicates from sorted array
-// Boyer–Moore majority vote algorithm
+// 169. Majority Element
+// https://leetcode.com/problems/majority-element/
 
 pub fn majority_element(nums: Vec<i32>) -> i32 {
     let mut curr = nums[0];
@@ -14,4 +14,14 @@ pub fn majority_element(nums: Vec<i32>) -> i32 {
     }
 
     curr as i32
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_majority_element() {
+        assert_eq!(majority_element(vec![3, 2, 3]), 3);
+    }
 }

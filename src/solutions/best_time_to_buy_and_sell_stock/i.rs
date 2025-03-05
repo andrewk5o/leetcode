@@ -24,4 +24,10 @@ mod tests {
         assert_eq!(max_profit(vec![7, 1, 5, 3, 6, 4]), 5);
         assert_eq!(max_profit(vec![7, 6, 4, 3, 1]), 0);
     }
+    
+    #[test]
+    fn test_single_day() {
+        // With one day, no transaction is possible.
+        assert_eq!(max_profit(vec![5]), 0);
+    }
 }
