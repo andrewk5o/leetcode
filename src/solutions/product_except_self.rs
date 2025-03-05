@@ -27,7 +27,7 @@ mod tests {
 
     #[test]
     fn test_product_except_self() {
-        let input = vec![1,2,3,4];
-        assert_eq!(product_except_self(input), vec![24,12,8,6]);
+        let input = vec![1, 2, 3, 4];
+        assert_eq!(product_except_self(input), vec![24, 12, 8, 6]);
     }
 }

@@ -32,7 +32,7 @@ mod tests {
     fn test_single_word() {
         assert_eq!(length_of_last_word("Hello".to_string()), 5);
     }
-    
+
     #[test]
     fn test_trailing_spaces() {
         assert_eq!(length_of_last_word("Hello ".to_string()), 5);

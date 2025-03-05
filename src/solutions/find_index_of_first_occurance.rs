@@ -1,3 +1,6 @@
+// 28. Find the Index of the First Occurrence in a String
+// https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
+
 pub fn str_str(haystack: String, needle: String) -> i32 {
     let haystack = haystack.as_bytes();
     let needle = needle.as_bytes();

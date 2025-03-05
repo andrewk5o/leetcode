@@ -1,3 +1,6 @@
+// 50. Pow(x, n)
+// https://leetcode.com/problems/powx-n/
+
 pub fn my_pow(x: f64, n: i32) -> f64 {
     fn pow(x: f64, n: i32) -> f64 {
         if x == 0.0 {

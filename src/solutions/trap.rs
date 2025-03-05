@@ -1,3 +1,6 @@
+// 42. Trapping Rain Water
+// https://leetcode.com/problems/trapping-rain-water/
+
 pub fn trap(height: Vec<i32>) -> i32 {
     let (mut l, mut r) = (0, height.len() - 1);
     let (mut max_left, mut max_right) = (height[l], height[r]);

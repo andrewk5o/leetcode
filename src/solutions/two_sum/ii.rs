@@ -1,3 +1,6 @@
+// 167. Two Sum II - Input Array Is Sorted
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
 pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     let (mut l, mut r) = (0, numbers.len() - 1);
 

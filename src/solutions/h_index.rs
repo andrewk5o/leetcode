@@ -1,4 +1,5 @@
 // 274. H-Index
+// https://leetcode.com/problems/h-index/
 
 pub fn h_index(citations: Vec<i32>) -> i32 {
     let mut paper_counts = vec![0; citations.len() + 1];

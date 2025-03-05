@@ -41,16 +41,20 @@ mod tests {
             ""
         );
     }
-    
+
     #[test]
     fn test_single_string() {
         assert_eq!(longest_common_prefix(vec!["hello".to_string()]), "hello");
     }
-    
+
     #[test]
     fn test_identical_strings() {
         assert_eq!(
-            longest_common_prefix(vec!["test".to_string(), "test".to_string(), "test".to_string()]),
+            longest_common_prefix(vec![
+                "test".to_string(),
+                "test".to_string(),
+                "test".to_string()
+            ]),
             "test"
         );
     }

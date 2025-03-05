@@ -1,4 +1,4 @@
-// 189. Rotate array
+// 189. Rotate Array
 // https://leetcode.com/problems/rotate-array/
 
 pub fn swap(nums: &mut Vec<i32>, l: i32, r: i32) {
