@@ -14,5 +14,21 @@ pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
             count += 1;
         }
     }
-    i32::try_from(k).unwrap()
+    k as i32
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_remove_duplicates() {
+        let mut nums = vec![1, 1, 1, 2, 2, 3];
+        assert_eq!(remove_duplicates(&mut nums), 5);
+        assert_eq!(&nums[..5], &[1, 1, 2, 2, 3]);
+
+        let mut nums = vec![0,0,1,1,1,1,2,3,3];
+        assert_eq!(remove_duplicates(&mut nums), 7);
+        assert_eq!(&nums[..7], &[0, 0, 1, 1, 2, 3, 3]);
+    }
 }
