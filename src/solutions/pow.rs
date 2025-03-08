@@ -27,7 +27,7 @@ mod tests {
     #[test]
     fn test_my_pow() {
         let res1 = my_pow(2.0, 10);
-        assert!((res1 - 1024.0).abs() < 1e-6);
+        assert_eq!(res1, 1024.0);
 
         let res2 = my_pow(2.0, -2);
         assert!((res2 - 0.25).abs() < 1e-6);
