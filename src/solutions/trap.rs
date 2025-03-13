@@ -1,4 +1,4 @@
-// 42. Trapping Rain Water
+// 42. Trapping Rain Water Solution
 // https://leetcode.com/problems/trapping-rain-water/
 
 pub fn trap(height: Vec<i32>) -> i32 {
