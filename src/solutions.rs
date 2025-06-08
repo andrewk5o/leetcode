@@ -19,6 +19,8 @@ pub mod remove_duplicates_from_sorted_array;
 pub mod remove_element;
 pub mod roman_to_integer;
 pub mod rotate_array;
+pub mod same_tree;
 pub mod three_sum;
 pub mod trap;
+pub mod tree_node;
 pub mod two_sum;
