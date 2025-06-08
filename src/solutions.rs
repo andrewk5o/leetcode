@@ -11,6 +11,7 @@ pub mod length_of_longest_substr;
 pub mod longest_common_prefix;
 pub mod majority_element;
 pub mod max_area;
+pub mod maximum_depth_of_binary_tree;
 pub mod merge_sorted_array;
 pub mod pow;
 pub mod product_except_self;
