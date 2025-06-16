@@ -1,6 +1,8 @@
 pub mod best_time_to_buy_and_sell_stock;
 pub mod can_complete_circuit;
 pub mod candy;
+pub mod construct_binary_tree_from_inorder_and_postorder;
+pub mod construct_binary_tree_from_preorder_and_inorder;
 pub mod find_index_of_first_occurance;
 pub mod h_index;
 pub mod insert_delete_get_random;
